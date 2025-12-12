@@ -1,0 +1,2836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nervous Coordination MCQs - MDCAT, NUMS, HEC, AKU & Competition Exams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- KaTeX for equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e3a8a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --background: #f0f9ff;
+            --card-bg: #ffffff;
+            --text-primary: #1e3a8a;
+            --text-secondary: #4b5563;
+            --border-radius: 5px;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.2s ease;
+            --compact-spacing: 3px;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #1e293b;
+            --dark: #f1f5f9;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            font-size: 8.1px;
+            line-height: 1.1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4.86px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            margin-bottom: 6.48px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 4.32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo h1 {
+            font-size: 0.972rem;
+            font-weight: 800;
+            margin-bottom: 1.62px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo p {
+            font-weight: 500;
+            font-size: 0.486rem;
+            opacity: 0.9;
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 0.648rem;
+            margin-bottom: 4.32px;
+            color: #ffd700;
+        }
+
+        .header-content p {
+            font-size: 0.486rem;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 15.12px;
+            height: 15.12px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 6.48px;
+            right: 6.48px;
+            z-index: 10;
+        }
+
+        .menu-toggle span {
+            width: 15.12px;
+            height: 1.62px;
+            background: white;
+            border-radius: 1.62px;
+            transition: var(--transition);
+            position: relative;
+            transform-origin: center;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(3.24px, 3.24px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4.32px, -4.32px);
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6.48px;
+            position: relative;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .nav-header h2 {
+            font-size: 0.729rem;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: none;
+            width: 25.92px;
+            height: 12.96px;
+            border-radius: 12.96px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.62px;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle span {
+            width: 9.72px;
+            height: 9.72px;
+            border-radius: 50%;
+            background: var(--primary);
+            position: absolute;
+            transition: var(--transition);
+            left: 1.62px;
+        }
+
+        .theme-toggle.dark span {
+            left: calc(100% - 11.34px);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2.43px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            padding: 4.05px 4.86px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Panel Styles */
+        .panel {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            margin-bottom: 6.48px;
+            transition: var(--transition);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+        }
+
+        .panel-actions {
+            display: flex;
+            gap: 2.43px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.43px;
+            padding: 2.43px 4.86px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0da271;
+            transform: translateY(-1px);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 4.86px;
+        }
+
+        .card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            margin-bottom: 4.05px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 0.567rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 4.86px;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 9.72px 0;
+            margin-top: auto;
+            font-size: 0.486rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 6.48px;
+            margin-top: 6.48px;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6.48px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-6.48px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* MCQ Card Styles */
+        .mcq-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .mcq-info {
+            flex-grow: 1;
+            margin-bottom: 4.86px;
+        }
+
+        .mcq-id {
+            font-weight: 700;
+            font-size: 0.567rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .mcq-subject {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+        }
+
+        .mcq-chapter {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+            font-weight: 600;
+        }
+
+        .mcq-details {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+            margin-bottom: 4.05px;
+        }
+
+        .start-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 4.05px 6.48px;
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .start-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        /* Stats Panel */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(64.8px, 1fr));
+            gap: 4.05px;
+            margin-bottom: 4.86px;
+        }
+
+        .stat-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.05px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-value {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Explanation Section Styles */
+        .explanation-section {
+            margin-bottom: 12.15px;
+            padding: 9.72px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 6.48px;
+            margin-bottom: 6.48px;
+            padding-bottom: 4.86px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.81rem;
+        }
+
+        .explanation-title {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .explanation-content {
+            font-size: 0.567rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .explanation-content h4 {
+            font-size: 0.648rem;
+            margin: 6.48px 0 3.24px;
+            color: var(--primary);
+        }
+
+        .explanation-content p {
+            margin-bottom: 4.86px;
+        }
+
+        .explanation-content ul, .explanation-content ol {
+            margin-left: 16.2px;
+            margin-bottom: 6.48px;
+        }
+
+        .explanation-content li {
+            margin-bottom: 2.43px;
+        }
+
+        .mechanism-diagram {
+            text-align: center;
+            margin: 9.72px 0;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .key-concept {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3.24px solid var(--primary);
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .key-concept-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+
+        /* MCQ Detail Styles */
+        .mcq-detail-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 9.72px;
+            margin-bottom: 9.72px;
+            box-shadow: var(--shadow);
+        }
+
+        .mcq-question {
+            font-size: 0.648rem;
+            font-weight: 600;
+            margin-bottom: 6.48px;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .mcq-options {
+            margin-bottom: 9.72px;
+        }
+
+        .mcq-option {
+            padding: 4.05px 6.48px;
+            margin-bottom: 3.24px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.567rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2.43px solid transparent;
+        }
+
+        .mcq-option:hover {
+            background: rgba(26, 86, 219, 0.05);
+        }
+
+        .mcq-option.selected {
+            border-left-color: var(--primary);
+            background: rgba(26, 86, 219, 0.1);
+        }
+
+        .mcq-option.correct {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .mcq-option.incorrect {
+            border-left-color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .mcq-explanation {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.486rem;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .mcq-explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .explanation-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+        }
+
+        .mcq-actions {
+            display: flex;
+            gap: 4.86px;
+            margin-top: 6.48px;
+        }
+
+        /* Progress Tracking */
+        .progress-section {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .progress-stats {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 6.48px;
+            background: #e5e7eb;
+            border-radius: 3.24px;
+            overflow: hidden;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 3.24px;
+            transition: width 0.5s ease;
+        }
+
+        /* Welcome Animation */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #1e3a8a, #1a56db);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        .welcome-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            text-align: center;
+            color: white;
+            padding: 12.15px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9.72px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4.86px 16.2px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-content h2 {
+            font-size: 1.458rem;
+            margin-bottom: 9.72px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 2.5s infinite;
+        }
+
+        .welcome-content p {
+            font-size: 0.648rem;
+            margin-bottom: 12.15px;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .welcome-logo {
+            font-size: 2.025rem;
+            margin-bottom: 12.15px;
+            color: #ffd700;
+            text-shadow: 0 0 12.15px rgba(255, 215, 0, 0.5);
+            animation: pulseWelcome 1.5s infinite;
+        }
+
+        @keyframes pulseWelcome {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 12.15px;
+            right: 12.15px;
+            background: #25D366;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.053rem;
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Conceptual Q&A Styles */
+        .conceptual-qa {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 8.1px;
+            margin-bottom: 8.1px;
+            border-left: 3.24px solid var(--accent);
+        }
+
+        .qa-question {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 4.05px;
+        }
+
+        .qa-question i {
+            color: var(--accent);
+            margin-top: 1.62px;
+        }
+
+        .qa-answer {
+            font-size: 0.486rem;
+            line-height: 1.3;
+            color: var(--text-secondary);
+            padding-left: 12.15px;
+        }
+
+        .qa-answer strong {
+            color: var(--primary);
+        }
+
+        /* Equation styling */
+        .equation {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4.86px;
+            border-radius: var(--border-radius);
+            margin: 4.86px 0;
+            text-align: center;
+            font-family: 'KaTeX_Main', 'Times New Roman', serif;
+        }
+
+        .dark-mode .equation {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .katex {
+            font-size: 1em !important;
+        }
+
+        /* Exam Specific Info */
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(97.2px, 1fr));
+            gap: 4.86px;
+            margin-bottom: 9.72px;
+        }
+
+        .exam-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 6.48px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .exam-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 4.05px;
+            font-size: 0.81rem;
+        }
+
+        .exam-name {
+            font-weight: 700;
+            font-size: 0.486rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .exam-desc {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--card-bg);
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                padding: 4.86px;
+                z-index: 100;
+                width: 129.6px;
+                display: none;
+            }
+            
+            .main-nav.active {
+                display: flex;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 4.05px;
+            }
+            
+            header {
+                padding: 4.86px;
+            }
+            
+            .logo h1 {
+                font-size: 0.81rem;
+            }
+            
+            .panel {
+                padding: 4.86px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 2.43px;
+            }
+            
+            .panel-actions {
+                flex-direction: column;
+            }
+            
+            .welcome-content {
+                padding: 9.72px;
+                margin: 6.48px;
+            }
+            
+            .welcome-content h2 {
+                font-size: 1.053rem;
+            }
+            
+            .welcome-content p {
+                font-size: 0.567rem;
+            }
+            
+            .welcome-logo {
+                font-size: 1.62rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 3.24px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 1.62px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Animation -->
+    <div class="welcome-overlay" id="welcome-overlay">
+        <div class="welcome-content scale-in">
+            <div class="welcome-logo">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h2>Nervous Coordination MCQs Portal</h2>
+            <p>Master Nervous Coordination for MDCAT, NUMS, HEC, AKU & Competition Exams with 40 MCQs based on textbook theory.</p>
+            <button class="btn btn-primary" id="start-btn" style="padding: 4.86px 9.72px; font-size: 0.648rem;">
+                Get Started <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029VbBeueg0QeajGumGWb0f" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="container">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="logo">
+                <h1>Nervous Coordination MCQs Portal</h1>
+                <p>MDCAT | NUMS | HEC | AKU | Competition Exam Preparation</p>
+            </div>
+            
+            <div class="header-content">
+                <h1>Comprehensive Nervous Coordination with 40 MCQs</h1>
+                <p>Master key concepts with detailed explanations and interactive questions based on textbook theory</p>
+            </div>
+        </header>
+
+        <!-- Exam Specific Information -->
+        <div class="panel fade-in">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Exam Preparation Focus</h3>
+            </div>
+            <div class="exam-info">
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="exam-name">MDCAT/NUMS</div>
+                    <div class="exam-desc">20-25% weightage in Biology Section</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="exam-name">HEC Test</div>
+                    <div class="exam-desc">Graduate Assessment: Neurophysiology</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="exam-name">AKU Test</div>
+                    <div class="exam-desc">Medical Entry: CNS & PNS functions</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="exam-name">Competition</div>
+                    <div class="exam-desc">Olympiad Level: Advanced neurobiology</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-header">
+                <h2>Navigation</h2>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="main-nav" id="main-nav">
+                <button class="nav-btn active" data-tab="intro">
+                    <i class="fas fa-brain"></i>
+                    <span>Introduction</span>
+                </button>
+                <button class="nav-btn" data-tab="neurons">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Neurons</span>
+                </button>
+                <button class="nav-btn" data-tab="nerve-impulse">
+                    <i class="fas fa-bolt"></i>
+                    <span>Nerve Impulse</span>
+                </button>
+                <button class="nav-btn" data-tab="nervous-system">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Nervous System</span>
+                </button>
+                <button class="nav-btn" data-tab="forty-mcqs">
+                    <i class="fas fa-question-circle"></i>
+                    <span>40 MCQs</span>
+                </button>
+                <button class="nav-btn" data-tab="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="total-mcqs">40</div>
+                <div class="stat-label">Total MCQs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="conceptual-qa">15</div>
+                <div class="stat-label">Conceptual Q&A</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-mcqs">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <!-- Notice Message -->
+        <div class="panel fade-in" style="border-left: 3.24px solid #f59e0b;">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Important Notice</h3>
+            </div>
+            <div class="explanation-content">
+                <p><strong>Attention Students:</strong> This portal is designed specifically for Pakistani MDCAT, NUMS, HEC, and AKU exam preparation based on Nervous Coordination textbook theory. If you find any incorrect information or discrepancies, please inform us immediately through the WhatsApp channel. We strive to provide the most accurate and up-to-date content for your success.</p>
+            </div>
+        </div>
+
+        <!-- Introduction Tab -->
+        <div class="tab-content active" id="intro-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="explanation-title">Nervous Coordination: Fundamental Concepts</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Nervous Coordination?</h4>
+                    <p>Nervous coordination is the system that provides coordination through electric signals among different body parts for response to stimuli. It consists of three basic steps: reception of stimulus, processing/analysis of information, and response to stimulus.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Types of Coordination Systems</div>
+                        <p>The body uses two coordination systems: nervous system (fast, electrical signals) and endocrine system (slow, chemical signals). Human nervous system is the most evolved among all animals with complex organization and precise control.</p>
+                    </div>
+                    
+                    <h4>MDCAT/NUMS Focus Areas:</h4>
+                    <ul>
+                        <li>Receptors Classification: Photoreceptors, Chemoreceptors, Mechanoreceptors, Thermoreceptors, Nociceptors</li>
+                        <li>Reflex Arc Components: Receptors, sensory neurons, interneuron, motor neuron, effectors</li>
+                        <li>Steps in Nervous Coordination: Reception → Analysis → Response</li>
+                        <li>Analysis by CNS: Brain and spinal cord act as coordinating centre</li>
+                        <li>Effectors: Muscles and glands that produce appropriate response</li>
+                    </ul>
+                    
+                    <h4>Types of MCQs That Can Be Asked:</h4>
+                    <ol>
+                        <li><strong>Conceptual Understanding:</strong> "Which receptor detects chemical stimuli?" (Answer: Chemoreceptors)</li>
+                        <li><strong>Application Based:</strong> "When touching a hot object, which component of reflex arc receives stimulus first?" (Answer: Receptors in skin)</li>
+                        <li><strong>Comparison Questions:</strong> "Difference between nervous and endocrine coordination"</li>
+                        <li><strong>Sequence Based:</strong> "Correct sequence of steps in nervous coordination"</li>
+                        <li><strong>Exception Based:</strong> "Which is NOT a type of receptor?"</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy: 4-Step Thinking Process</div>
+                        <ol>
+                            <li><strong>Identify Key Terms:</strong> Look for receptor types, coordination steps, components</li>
+                            <li><strong>Recall Theory:</strong> Remember textbook definitions and classifications</li>
+                            <li><strong>Eliminate Implausible Options:</strong> Remove options that don't match textbook descriptions</li>
+                            <li><strong>Verify with Mechanism:</strong> Check if answer aligns with physiological mechanism</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (3/15)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are efferent neurons called motor neurons?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Efferent neurons are called motor neurons because they transmit signals from CNS to effectors (muscles and glands). The term "motor" refers to movement production by muscles. These neurons command effectors to produce response.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the difference between receptors and effectors?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> <strong>Receptors</strong> receive stimuli from environment, can be complete organs or just neuron endings. <strong>Effectors</strong> produce response, include muscles (movement) and glands (secretion). Receptors are input devices, effectors are output devices of nervous system.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does interneuron function in nervous coordination?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Interneurons are special neurons in CNS that process/analyze sensory information. They integrate multiple inputs, make decisions, and determine appropriate response. In reflex arc, interneuron lies completely within spinal cord, connecting sensory and motor neurons.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Introduction MCQs Progress</div>
+                    <div class="progress-stats"><span id="intro-completed">0</span>/8 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="intro-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-brain"></i> Introduction MCQs (8)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-intro">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="intro-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Neurons Tab -->
+        <div class="tab-content" id="neurons-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="explanation-title">Neurons: Structure, Types and Functions</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Neuron Structure:</h4>
+                    <p>Neurons are basic structural and functional units of nervous system. All neurons have three basic components: cell body, dendrites, and axon.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Neuron Structural Components</div>
+                        <p><strong>Cell body:</strong> Contains nucleus, Nissl's bodies (ribosomes and rough ER for protein synthesis), neurofibrils.<br>
+                        <strong>Dendrites:</strong> Short, branched extensions that receive stimuli and conduct impulses to cell body.<br>
+                        <strong>Axon:</strong> Long nerve fiber with constant diameter, conducts action potentials away from cell body to presynaptic terminals.<br>
+                        <strong>Myelin sheath:</strong> Formed by Schwann cells in PNS, acts as insulating layer, increases conduction velocity.</p>
+                    </div>
+                    
+                    <h4>Types of MCQs That Can Be Asked:</h4>
+                    <ol>
+                        <li><strong>Structural Identification:</strong> "Which part of neuron contains Nissl's bodies?" (Cell body)</li>
+                        <li><strong>Functional Correlation:</strong> "Damage to Schwann cells affects which neuronal property?" (Conduction velocity)</li>
+                        <li><strong>Comparison Questions:</strong> "Difference between dendrites and axons"</li>
+                        <li><strong>Sequence Questions:</strong> "Direction of impulse conduction in neuron"</li>
+                        <li><strong>Application Based:</strong> "In multiple sclerosis, which neuronal component is damaged?" (Myelin sheath)</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Learning Trick: Neuron Structure Mnemonics</div>
+                        <p><strong>Dendrites:</strong> "Dendrites Detect" (receive stimuli)<br>
+                        <strong>Axon:</strong> "Axon Away" (conducts away from cell body)<br>
+                        <strong>Myelin:</strong> "Myelin Makes Messages Move More" (increases conduction speed)<br>
+                        <strong>Nodes of Ranvier:</strong> "Nodes Need Na+" (saltatory conduction)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (6/15)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why do myelinated axons conduct impulses faster?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Myelinated axons conduct faster due to saltatory conduction where action potential jumps between Nodes of Ranvier. Myelin sheath acts as insulator preventing current loss, so depolarization occurs only at nodes. This is 50-60 times faster than continuous conduction in unmyelinated axons.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the functional significance of Nissl's bodies in neuron cell body?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Nissl's bodies are groups of ribosomes and rough ER associated with protein synthesis. Neurons have high metabolic activity and need constant protein synthesis for neurotransmitter production, enzyme synthesis, and maintenance of cellular structures.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How are dendrites adapted for their function?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Dendrites are short and thin, often highly branched cytoplasmic extensions that are gradually tapered. This branched structure increases surface area for receiving synaptic inputs from other neurons. The tapering helps in efficient conduction of graded potentials toward cell body.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Neurons MCQs Progress</div>
+                    <div class="progress-stats"><span id="neurons-completed">0</span>/8 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="neurons-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-project-diagram"></i> Neurons MCQs (8)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-neurons">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="neurons-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Nerve Impulse Tab -->
+        <div class="tab-content" id="nerve-impulse-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="explanation-title">Nerve Impulse: Generation and Transmission</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Nerve Impulse:</h4>
+                    <p>Nerve impulse is information or signal about a stimulus that is transmitted from receptors to CNS and from CNS to effectors. It's a wave of electrochemical changes traveling along neuron.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Electrochemical Nature of Nerve Impulse</div>
+                        <p>Nerve impulse involves:<br>
+                        <strong>Electrical aspect:</strong> Membrane potential changes (-70mV resting → +30mV depolarization)<br>
+                        <strong>Chemical aspect:</strong> Ion movement (Na⁺ influx, K⁺ efflux) through voltage-gated channels<br>
+                        <strong>Energy aspect:</strong> ATP used by Na⁺/K⁺ pump to restore ion gradients</p>
+                    </div>
+                    
+                    <h4>Types of MCQs That Can Be Asked:</h4>
+                    <ol>
+                        <li><strong>Definition Based:</strong> "Nerve impulse is defined as..."</li>
+                        <li><strong>Sequence Questions:</strong> "Correct sequence of events during action potential"</li>
+                        <li><strong>Numerical Questions:</strong> "Resting membrane potential value is..." (-70mV)</li>
+                        <li><strong>Ion Movement Questions:</strong> "During depolarization, which ion moves inward?" (Na⁺)</li>
+                        <li><strong>Application Based:</strong> "Effect of tetrodotoxin (blocks Na⁺ channels) on nerve impulse"</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy: Ion Movement Analysis</div>
+                        <p>For nerve impulse MCQs, remember:<br>
+                        1. <strong>Resting state:</strong> More K⁺ inside, more Na⁺ outside (-70mV)<br>
+                        2. <strong>Depolarization:</strong> Na⁺ gates open → Na⁺ rushes IN (to +30mV)<br>
+                        3. <strong>Repolarization:</strong> K⁺ gates open → K⁺ rushes OUT (back to -70mV)<br>
+                        4. <strong>Hyperpolarization:</strong> K⁺ gates close slowly → slightly below -70mV<br>
+                        5. <strong>Refractory period:</strong> Na⁺/K⁺ pump restores gradients (3 Na⁺ out, 2 K⁺ in)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (9/15)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does Na⁺/K⁺ pump contribute to resting membrane potential?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Na⁺/K⁺ pump actively transports 3 Na⁺ out and 2 K⁺ in per ATP. This creates concentration gradients: high Na⁺ outside, high K⁺ inside. The pump also makes inside more negative because it moves more positive charges out (3 Na⁺) than in (2 K⁺), contributing to -70mV resting potential.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is threshold stimulus critical for nervous system function?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Threshold ensures only significant stimuli produce responses, preventing constant random firing. Without threshold, neurons would fire constantly to minor fluctuations, wasting energy and losing signal specificity. This all-or-none principle ensures only adequate stimuli generate action potentials.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the energy efficiency of saltatory conduction?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Saltatory conduction minimizes disturbances in Na⁺/K⁺ concentration gradients because depolarization occurs only at Nodes of Ranvier. This reduces energy cost of Na⁺/K⁺ pump which has to restore fewer ions. Myelin sheath prevents current leakage, so action potential jumps between nodes without depolarizing entire membrane.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Nerve Impulse MCQs Progress</div>
+                    <div class="progress-stats"><span id="nerve-impulse-completed">0</span>/8 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="nerve-impulse-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-bolt"></i> Nerve Impulse MCQs (8)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-nerve-impulse">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="nerve-impulse-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Nervous System Tab -->
+        <div class="tab-content" id="nervous-system-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="explanation-title">Human Nervous System Organization</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Nervous System Organization:</h4>
+                    <p>Human nervous system consists of Central Nervous System (CNS) and Peripheral Nervous System (PNS). CNS includes brain and spinal cord, while PNS includes cranial and spinal nerves.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Divisions of Nervous System</div>
+                        <p><strong>CNS:</strong> Brain (receives/processes information) + Spinal cord (conducts signals, controls reflexes)<br>
+                        <strong>PNS:</strong> Sensory neurons (to CNS) + Motor neurons (from CNS)<br>
+                        <strong>Motor Division:</strong> Somatic (voluntary) + Autonomic (involuntary)<br>
+                        <strong>Autonomic:</strong> Sympathetic (fight/flight) + Parasympathetic (rest/digest)</p>
+                    </div>
+                    
+                    <h4>Types of MCQs That Can Be Asked:</h4>
+                    <ol>
+                        <li><strong>Classification Questions:</strong> "Which is part of CNS?"</li>
+                        <li><strong>Functional Questions:</strong> "Somatic nervous system controls..."</li>
+                        <li><strong>Comparison Questions:</strong> "Sympathetic vs parasympathetic"</li>
+                        <li><strong>Pathway Questions:</strong> "Direction of impulse in sensory neuron"</li>
+                        <li><strong>Application Based:</strong> "Activation during emergency situations"</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy: Nervous System Hierarchy</div>
+                        <p>For nervous system MCQs:<br>
+                        1. <strong>CNS:</strong> Brain + Spinal cord (coordination center)<br>
+                        2. <strong>PNS:</strong> Everything else (communication lines)<br>
+                        3. <strong>Sensory division:</strong> Afferent (to CNS)<br>
+                        4. <strong>Motor division:</strong> Efferent (from CNS)<br>
+                        5. <strong>Somatic:</strong> Voluntary skeletal muscles<br>
+                        6. <strong>Autonomic:</strong> Involuntary organs<br>
+                        7. <strong>Sympathetic:</strong> Energy expenditure (emergency)<br>
+                        8. <strong>Parasympathetic:</strong> Energy conservation (rest)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (12/15)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is CNS described as "coordinating centre"?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> CNS is coordinating centre because it: 1) Receives all sensory inputs, 2) Integrates/processes information, 3) Makes decisions about appropriate responses, 4) Stores memories for future reference, 5) Generates thoughts and emotions, 6) Initiates and coordinates all voluntary and involuntary responses through PNS.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are spinal nerves called "mixed nerves"?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Spinal nerves are mixed because each contains both sensory fibers (in dorsal root) carrying impulses to spinal cord, and motor fibers (in ventral root) carrying impulses from spinal cord. This allows two-way communication between spinal cord and body parts. Dorsal and ventral roots join just before spinal nerve leaves vertebral column.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the functional significance of autonomic nervous system having two antagonistic divisions?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Sympathetic (fight/flight) and parasympathetic (rest/digest) have opposite effects on organs. This allows precise control: sympathetic prepares body for emergency (increases HR, BP), parasympathetic conserves energy (decreases HR, increases digestion). Balance between them maintains homeostasis appropriate to situation.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Nervous System MCQs Progress</div>
+                    <div class="progress-stats"><span id="nervous-system-completed">0</span>/8 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="nervous-system-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-network-wired"></i> Nervous System MCQs (8)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-nervous-system">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="nervous-system-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 40 MCQs Tab -->
+        <div class="tab-content" id="forty-mcqs-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="explanation-title">40 Comprehensive MCQs on Nervous Coordination</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Comprehensive MCQ Coverage:</h4>
+                    <p>This section contains 40 MCQs covering all aspects of Nervous Coordination. Questions are categorized by difficulty: Basic Recall (15), Conceptual Understanding (15), Application Based (10).</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy for MDCAT/NUMS Exams</div>
+                        <ol>
+                            <li><strong>4-Step Thinking Process:</strong> Identify → Recall → Eliminate → Verify</li>
+                            <li><strong>Textbook Reference:</strong> Link answer to textbook theory</li>
+                            <li><strong>Elimination Technique:</strong> Remove options contradicting textbook descriptions</li>
+                            <li><strong>Mechanism Verification:</strong> Check if answer aligns with physiological mechanism</li>
+                            <li><strong>Time Management:</strong> 60-90 seconds per complex MCQ</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Common MCQ Patterns in Pakistani Exams:</h4>
+                    <ul>
+                        <li><strong>Direct Recall:</strong> "Nerve impulse is defined as..."</li>
+                        <li><strong>Sequence Questions:</strong> "Correct sequence in reflex arc"</li>
+                        <li><strong>Structure-Function:</strong> "Which brain region controls homeostasis?"</li>
+                        <li><strong>Ion Movement:</strong> "During depolarization, which ion moves?"</li>
+                        <li><strong>Classification:</strong> "Which receptor type detects pressure changes?"</li>
+                        <li><strong>Numerical Value:</strong> "Resting membrane potential value is..."</li>
+                        <li><strong>Comparative:</strong> "Difference between myelinated vs unmyelinated axons"</li>
+                        <li><strong>Application:</strong> "Effect of drug blocking Na⁺ channels"</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">40 MCQs Progress</div>
+                    <div class="progress-stats"><span id="forty-completed">0</span>/40 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="forty-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-question-circle"></i> 40 Nervous Coordination MCQs</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-forty">
+                            <i class="fas fa-sync-alt"></i> Refresh All
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="forty-mcqs-container">
+                    <!-- 40 MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Tab -->
+        <div class="tab-content" id="progress-tab">
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-chart-line"></i> Progress Tracking</h3>
+                </div>
+                
+                <div class="explanation-section">
+                    <div class="explanation-header">
+                        <div class="explanation-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="explanation-title">Your Learning Progress</div>
+                    </div>
+                    
+                    <div class="explanation-content">
+                        <p>Track your progress through 40 MCQs and 15 Conceptual Q&A. Detailed breakdown:</p>
+                        
+                        <div class="progress-section" style="margin-top: 12.15px;">
+                            <div class="progress-header">
+                                <div class="progress-title">Overall Progress</div>
+                                <div class="progress-stats"><span id="overall-completed">0</span>/40 completed</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overall-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px;">
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Introduction</div>
+                                    <div class="progress-stats"><span id="intro-summary">0</span>/8</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="intro-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Neurons</div>
+                                    <div class="progress-stats"><span id="neurons-summary">0</span>/8</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="neurons-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Nerve Impulse</div>
+                                    <div class="progress-stats"><span id="nerve-impulse-summary">0</span>/8</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="nerve-impulse-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Nervous System</div>
+                                    <div class="progress-stats"><span id="nervous-system-summary">0</span>/8</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="nervous-system-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">40 MCQs Set</div>
+                                    <div class="progress-stats"><span id="forty-summary">0</span>/40</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="forty-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px; text-align: center;">
+                            <button class="btn btn-primary" id="reset-progress">
+                                <i class="fas fa-redo"></i> Reset Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nervous Coordination MCQs Portal. MDCAT | NUMS | HEC | AKU | Competition Exam Preparation.</p>
+                <p>Complete coverage with 40 MCQs and 15 Conceptual Q&A based on textbook theory for Pakistani students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Nervous Coordination MCQ Data - 40 MCQs total
+        const nervousCoordinationMCQs = {
+            intro: [
+                {
+                    id: 1,
+                    question: "Which sequence correctly represents the three basic steps involved in nervous coordination for higher animals, considering the specific roles of receptors, CNS, and effectors in generating appropriate responses to environmental stimuli?",
+                    options: [
+                        "Reception of stimulus by specialized receptors → Processing/Analysis of information in CNS → Response execution by effectors",
+                        "Analysis of information in receptors → Transmission to effectors → Response modification by CNS",
+                        "Response generation by effectors → Feedback to receptors → Analysis in CNS",
+                        "Direct receptor-effector connection → CNS monitoring → Subsequent adjustment"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Nervous coordination in higher animals consists of three basic steps: reception of stimulus, processing/analysis of information, and response to stimulus. Receptors receive stimuli, CNS processes information, and effectors produce response. This matches option A perfectly.",
+                    incorrectReasoning: {
+                        1: "Incorrect because receptors don't analyze information; they only receive stimuli. Analysis occurs in CNS.",
+                        2: "Incorrect sequence - response comes last, not first. The correct sequence is reception → analysis → response.",
+                        3: "Incorrect because nervous coordination involves CNS processing before response, not just monitoring."
+                    }
+                },
+                {
+                    id: 2,
+                    question: "When a person enters a perfume shop and detects various floral scents, which receptor type is primarily activated and what is the mechanism of stimulus detection?",
+                    options: [
+                        "Chemoreceptors in nasal epithelium detecting specific odor molecules through chemical binding to receptor proteins",
+                        "Mechanoreceptors in nasal cavity detecting air pressure changes from scent molecules",
+                        "Thermoreceptors detecting temperature differences caused by evaporating perfume",
+                        "Nociceptors responding to chemical irritation from strong perfume concentrations"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Chemoreceptors detect ions or molecules (chemical stimuli). Receptors found in nasal epithelium are specifically for detection of smell (olfaction). The mechanism involves chemical binding of odor molecules to receptor proteins.",
+                    incorrectReasoning: {
+                        1: "Incorrect - mechanoreceptors detect pressure/position changes, not chemical stimuli.",
+                        2: "Incorrect - thermoreceptors detect temperature, not chemical scents.",
+                        3: "Incorrect - nociceptors detect tissue damage/pain, not normal scent detection."
+                    }
+                },
+                {
+                    id: 3,
+                    question: "When a pianist reads sheet music and coordinates complex finger movements to play a difficult passage, which specific component of the nervous system integrates the visual information with stored motor memories?",
+                    options: [
+                        "CNS (specifically brain association areas) integrates visual inputs with stored memories, then sends commands to motor neurons controlling hand muscles",
+                        "Spinal cord reflex arcs automatically generate finger movements without brain involvement once music reading begins",
+                        "Peripheral sensory neurons directly connect to motor neurons in hands for immediate response to visual stimuli",
+                        "Autonomic nervous system regulates involuntary responses that indirectly affect finger dexterity"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Complex piano playing requires CNS integration. Different sensory information is collected by sensory receptors and transmitted to central nervous system where signals are integrated, creating sensation, adding to memory, and helping to produce thoughts. CNS then sends commands to effectors (muscles).",
+                    incorrectReasoning: {
+                        1: "Incorrect - complex piano playing requires brain processing, not just spinal reflexes.",
+                        2: "Incorrect - peripheral neurons don't directly connect; CNS processing is required.",
+                        3: "Incorrect - autonomic NS controls involuntary functions, not voluntary piano playing."
+                    }
+                },
+                {
+                    id: 4,
+                    question: "In the analogy between computer components and human nervous system, which computer component is functionally analogous to the interneuron in spinal cord that processes sensory information?",
+                    options: [
+                        "Central Processing Unit (CPU) that processes data and determines operations",
+                        "Input devices like keyboard/mouse that receive inputs",
+                        "Output devices like monitor/printer that produce outputs",
+                        "RAM memory that stores information"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "The CPU determines sequence of all operations in a computer, analogous to interneuron processing in CNS. Interneurons perform processing/analysis of sensory information, similar to how CPU processes data.",
+                    incorrectReasoning: {
+                        1: "Incorrect - input devices analogize to receptors, not interneurons.",
+                        2: "Incorrect - output devices analogize to effectors, not processing units.",
+                        3: "Incorrect - memory storage analogizes to brain memory, not interneuron processing."
+                    }
+                },
+                {
+                    id: 5,
+                    question: "If a patient has damage specifically to Pacinian corpuscles in skin and baroreceptors in blood vessel walls, which sensory modalities would be most impaired?",
+                    options: [
+                        "Impaired detection of pressure changes and blood pressure regulation",
+                        "Loss of temperature sensation",
+                        "Impaired chemical detection",
+                        "Reduced pain perception"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Pacinian corpuscles in skin and baroreceptors in blood vessel walls are mechanoreceptors that detect changes in pressure. Damage to these specifically impairs pressure detection. Baroreceptors regulate blood pressure by detecting vessel stretch.",
+                    incorrectReasoning: {
+                        1: "Incorrect - thermoreceptors are separate receptors for temperature.",
+                        2: "Incorrect - chemoreceptors detect chemicals, not mechanoreceptors.",
+                        3: "Incorrect - nociceptors are separate pain receptors."
+                    }
+                },
+                {
+                    id: 6,
+                    question: "Why is the human nervous system described as 'the most evolved among all animals'?",
+                    options: [
+                        "Highest complexity in neuron organization and processing capacity, with superior integrative functions",
+                        "Largest absolute size of brain relative to body",
+                        "Exclusive presence of certain neuron types not found in other animals",
+                        "Complete independence from endocrine system coordination"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Human nervous system shows highest complexity in neuron organization, processing capacity of brain, and precision of responses. Compared to other animals, humans have larger cerebral cortex, more interneurons, and superior integrative functions.",
+                    incorrectReasoning: {
+                        1: "Incorrect - some animals have larger brains relative to body size. Evolution is about organization/function.",
+                        2: "Incorrect - bipolar/multipolar neurons exist in other animals.",
+                        3: "Incorrect - human nervous system works with endocrine system."
+                    }
+                },
+                {
+                    id: 7,
+                    question: "When a student feels anxious before an exam and experiences dry mouth due to reduced salivation, which specific type of effector is involved?",
+                    options: [
+                        "Glands (salivary) as effectors controlled by autonomic nervous system",
+                        "Smooth muscles in blood vessels causing vasoconstriction",
+                        "Cardiac muscle increasing heart rate",
+                        "Skeletal muscles around salivary glands"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Effectors include muscles and glands. Salivary glands are effectors. Autonomic nervous system controls glands and smooth/cardiac muscles (involuntary). Dry mouth involves autonomic control of salivary glands.",
+                    incorrectReasoning: {
+                        1: "Incorrect - while vasoconstriction may occur, direct salivation control is via glands.",
+                        2: "Incorrect - heart rate increase is separate response.",
+                        3: "Incorrect - skeletal muscles are for voluntary movements, not gland control."
+                    }
+                },
+                {
+                    id: 8,
+                    question: "What is the sequence of events when a person accidentally touches a hot stove, immediately withdraws hand, and only then becomes consciously aware of pain?",
+                    options: [
+                        "Heat activates nociceptors → Sensory neuron to spinal cord → Interneuron → Motor neuron → Muscle contraction → Signal to brain → Conscious pain",
+                        "Heat activates thermoreceptors → Direct signal to brain → Conscious decision to withdraw hand",
+                        "Heat activates multiple receptors → Signal to brain only → Brain sends withdrawal command",
+                        "Autonomic response → Involuntary vasodilation → Withdrawal as secondary effect"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Reflex arc produces rapid withdrawal: receptors → sensory neuron → spinal cord (interneuron) → motor neuron → effector (muscle). This occurs via spinal cord without immediate brain involvement. Signal then reaches brain for conscious pain awareness.",
+                    incorrectReasoning: {
+                        1: "Incorrect - reflex arc bypasses brain for rapid response. Withdrawal occurs before conscious awareness.",
+                        2: "Incorrect - pain perception occurs after withdrawal, not before.",
+                        3: "Incorrect - withdrawal is somatic reflex, not autonomic response."
+                    }
+                }
+            ],
+            neurons: [
+                {
+                    id: 1,
+                    question: "In a stained neuron, granular cytoplasmic structures rich in ribosomes and rough endoplasmic reticulum are observed primarily in the cell body but not in axon terminals. What are these structures?",
+                    options: [
+                        "Nissl's bodies involved in protein synthesis",
+                        "Mitochondria producing ATP",
+                        "Neurofibrils providing structural support",
+                        "Golgi apparatus vesicles"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Nissl's bodies are groups of ribosomes and rough ER associated with protein synthesis. They're found in cell body but not in axon. Function: protein synthesis for neurotransmitters, enzymes, structural proteins.",
+                    incorrectReasoning: {
+                        1: "Incorrect - mitochondria are throughout neuron for ATP production.",
+                        2: "Incorrect - neurofibrils extend into processes.",
+                        3: "Incorrect - Golgi apparatus packages neurotransmitters, vesicles are in terminals."
+                    }
+                },
+                {
+                    id: 2,
+                    question: "Which type of neuron has its cell body located between two processes where one functions as dendrite and the other as axon?",
+                    options: [
+                        "Bipolar neuron allowing direct transmission",
+                        "Unipolar neuron with cell body off to side",
+                        "Multipolar neuron with multiple dendrites",
+                        "Pseudounipolar neuron dividing single process"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "In bipolar neurons, cell body is located between two processes: an axon and a dendrite. Examples include retinal bipolar cells. Arrangement allows direct receptor→CNS transmission with cell body not in conduction path.",
+                    incorrectReasoning: {
+                        1: "Incorrect - unipolar neuron has single process dividing.",
+                        2: "Incorrect - multipolar has multiple dendrites.",
+                        3: "Incorrect - pseudounipolar is similar to unipolar."
+                    }
+                },
+                {
+                    id: 3,
+                    question: "If a patient has autoimmune destruction of Schwann cells in peripheral nerves, which aspect of nerve impulse conduction is most impaired?",
+                    options: [
+                        "Conduction velocity decreases dramatically due to loss of myelin insulation",
+                        "Action potential amplitude decreases",
+                        "Refractory period lengthens",
+                        "Threshold stimulus increases"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Schwann cells produce myelin in PNS. Myelinated axons conduct much faster due to saltatory conduction. Loss of myelin forces continuous conduction along entire axon, slowing velocity 50-60 times.",
+                    incorrectReasoning: {
+                        1: "Incorrect - amplitude is determined by ion gradients.",
+                        2: "Incorrect - refractory period depends on ion channel kinetics.",
+                        3: "Incorrect - threshold depends on voltage-gated channel density."
+                    }
+                },
+                {
+                    id: 4,
+                    question: "What is the functional difference between dendrites and axons in terms of impulse conduction direction?",
+                    options: [
+                        "Dendrites conduct toward cell body, axons conduct away from cell body",
+                        "Both conduct away from cell body",
+                        "Dendrites conduct action potentials, axons conduct graded potentials",
+                        "Axons receive inputs, dendrites transmit outputs"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Dendrites receive stimuli and conduct impulses to cell body. Axons conduct action potentials from neuron cell body to presynaptic terminals. Thus dendrites conduct toward cell body, axons conduct away.",
+                    incorrectReasoning: {
+                        1: "Incorrect - axons conduct away, not both in same direction.",
+                        2: "Incorrect - axons conduct action potentials, dendrites usually graded.",
+                        3: "Incorrect - axons transmit outputs, dendrites receive inputs."
+                    }
+                },
+                {
+                    id: 5,
+                    question: "What is the consequence of damage specifically to the axolemma while axoplasm remains intact?",
+                    options: [
+                        "Disrupts action potential generation/propagation",
+                        "Affects only neurotransmitter release at terminals",
+                        "Causes complete conduction failure like myelin damage",
+                        "No significant effect on conduction"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Axolemma is the axon cell membrane containing voltage-gated ion channels for action potentials. Damage prevents depolarization and impulse conduction. Myelin damage slows but doesn't prevent conduction.",
+                    incorrectReasoning: {
+                        1: "Incorrect - affects entire conduction, not just terminals.",
+                        2: "Incorrect - axolemma damage prevents conduction, myelin damage slows it.",
+                        3: "Incorrect - membrane is essential for action potentials."
+                    }
+                },
+                {
+                    id: 6,
+                    question: "Which type of neuron is found in dorsal root ganglion transmitting sensory information from skin to spinal cord?",
+                    options: [
+                        "Unipolar neuron with single process dividing",
+                        "Bipolar neuron with cell body between processes",
+                        "Multipolar neuron with multiple dendrites",
+                        "Pseudounipolar neuron functionally bipolar"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Dorsal root ganglion neurons are typically unipolar. Unipolar neuron has single process that extends from cell body and divides into two: peripheral branch to receptors, central branch to spinal cord.",
+                    incorrectReasoning: {
+                        1: "Incorrect - bipolar neurons are in special senses, not dorsal root.",
+                        2: "Incorrect - multipolar neurons are motor/interneurons.",
+                        3: "Incorrect - pseudounipolar is developmental variant."
+                    }
+                },
+                {
+                    id: 7,
+                    question: "What is the relative conduction velocity of thick myelinated axon compared to thin myelinated and thick unmyelinated axons?",
+                    options: [
+                        "Thick myelinated fastest, thin myelinated intermediate, thick unmyelinated slowest",
+                        "Thick unmyelinated fastest because of diameter",
+                        "Thin myelinated fastest because myelin is primary factor",
+                        "All equal regardless of structure"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Larger and thicker axon transmits information faster. Myelinated axons transmit much faster than unmyelinated. Thus thick+myelinated fastest. Myelin effect is dramatic, so thin myelinated > thick unmyelinated.",
+                    incorrectReasoning: {
+                        1: "Incorrect - myelin effect is dramatic, so myelinated > unmyelinated.",
+                        2: "Incorrect - myelin effect is dramatic, not just thickness.",
+                        3: "Incorrect - velocity varies significantly with structure."
+                    }
+                },
+                {
+                    id: 8,
+                    question: "What structural adaptation allows presynaptic terminals to effectively transmit signals to next neuron?",
+                    options: [
+                        "Enlarged ends contain synaptic vesicles with neurotransmitters",
+                        "Enlargement increases surface area for receiving inputs",
+                        "Enlargement contains extra mitochondria",
+                        "Enlarged ends have no functional significance"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Axons terminate with enlarged ends called presynaptic terminals. These contain synaptic vesicles storing neurotransmitters for release into synaptic cleft upon arrival of action potential.",
+                    incorrectReasoning: {
+                        1: "Incorrect - presynaptic terminals transmit, not receive.",
+                        2: "Incorrect - mitochondria support all functions.",
+                        3: "Incorrect - structures typically have functional significance."
+                    }
+                }
+            ],
+            nerveImpulse: [
+                {
+                    id: 1,
+                    question: "Nerve impulse is described as 'a wave of electrochemical changes.' What are the electrical and chemical components?",
+                    options: [
+                        "Electrical: Voltage changes; Chemical: Ion movements; Interaction: Ion movements cause electrical changes",
+                        "Electrical: Current in extracellular fluid; Chemical: Neurotransmitter release; No interaction",
+                        "Electrical: Static charge; Chemical: ATP production; Separate processes",
+                        "Electrical: Magnetic fields; Chemical: pH changes; Independent components"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Electrical component: membrane potential changes (-70mV→+30mV→-70mV). Chemical component: ion movements (Na⁺ influx, K⁺ efflux) through voltage-gated channels. Interaction: ion movements cause potential changes which open more channels.",
+                    incorrectReasoning: {
+                        1: "Incorrect - both intracellular/extracellular currents matter; neurotransmitters separate.",
+                        2: "Incorrect - electrical changes dynamic; ATP is energy source.",
+                        3: "Incorrect - magnetic fields byproducts; pH changes minimal."
+                    }
+                },
+                {
+                    id: 2,
+                    question: "Why is the concept of 'threshold' critical for nervous system function?",
+                    options: [
+                        "Ensures only significant stimuli produce responses, preventing constant random firing",
+                        "Prevents action potentials from being too large",
+                        "Synchronizes firing across neuron populations",
+                        "Has no functional significance"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Threshold ensures all-or-none response: significant stimuli produce full action potential, minor fluctuations ignored. Prevents noise from triggering responses, conserving energy and maintaining signal integrity.",
+                    incorrectReasoning: {
+                        1: "Incorrect - doesn't limit size; all-or-none means same size.",
+                        2: "Incorrect - synchronization by other mechanisms.",
+                        3: "Incorrect - has clear functional significance."
+                    }
+                },
+                {
+                    id: 3,
+                    question: "What is the functional significance of absolute refractory period?",
+                    options: [
+                        "Ensures one-way propagation and limits maximum firing frequency",
+                        "Allows action potentials to summate for stronger responses",
+                        "Synchronizes firing across different neurons",
+                        "Has no functional role"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Absolute refractory period prevents backward conduction (one-way propagation) and limits maximum firing frequency (~250 Hz). During this period, neuron cannot respond to stimulus of any strength.",
+                    incorrectReasoning: {
+                        1: "Incorrect - refractory prevents summation.",
+                        2: "Incorrect - synchronization by other mechanisms.",
+                        3: "Incorrect - has clear functional roles."
+                    }
+                },
+                {
+                    id: 4,
+                    question: "Why is saltatory conduction in myelinated axons much faster than in unmyelinated axons?",
+                    options: [
+                        "Myelin insulates axon, forcing depolarization only at Nodes of Ranvier",
+                        "Myelin contains conductive materials",
+                        "Myelin reduces axon diameter decreasing resistance",
+                        "Myelin increases temperature along axon"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Saltatory conduction is faster because myelin insulation prevents current leakage, forcing depolarization only at Nodes of Ranvier where action potential regenerates. Current jumps between nodes, skipping internode regions.",
+                    incorrectReasoning: {
+                        1: "Incorrect - myelin is insulator, not conductor.",
+                        2: "Incorrect - smaller diameter increases resistance.",
+                        3: "Incorrect - myelin doesn't affect temperature significantly."
+                    }
+                },
+                {
+                    id: 5,
+                    question: "What is the sequence of ion channel activation during an action potential?",
+                    options: [
+                        "Na⁺ channels open → Na⁺ influx → Depolarization → K⁺ channels open → K⁺ efflux → Repolarization",
+                        "Na⁺ channels open randomly → Na⁺ efflux → Hyperpolarization",
+                        "K⁺ channels open first → K⁺ influx → Depolarization",
+                        "All channels open simultaneously"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Threshold reached → Voltage-gated Na⁺ channels open → Na⁺ influx → Depolarization → Na⁺ channels inactivate → Voltage-gated K⁺ channels open → K⁺ efflux → Repolarization → K⁺ channels close slowly → Hyperpolarization.",
+                    incorrectReasoning: {
+                        1: "Incorrect - Na⁺ moves IN during depolarization.",
+                        2: "Incorrect - K⁺ moves OUT during repolarization.",
+                        3: "Incorrect - sequential opening is crucial."
+                    }
+                },
+                {
+                    id: 6,
+                    question: "What is the expected conduction speed in large diameter myelinated axon compared to small unmyelinated axon?",
+                    options: [
+                        "Large myelinated fastest (up to 120 m/s), small unmyelinated slowest (1-3 m/s)",
+                        "Small unmyelinated fastest because less distance",
+                        "Large unmyelinated fastest because diameter effect outweighs myelin",
+                        "All axons conduct at same speed"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Myelin fibers conduct at speeds up to 120 m/s, non-myelinated fibers 1-3 m/s. Thicker fibers conduct faster. Thus large diameter + myelin = fastest; small + unmyelinated = slowest.",
+                    incorrectReasoning: {
+                        1: "Incorrect - smaller diameter means higher resistance.",
+                        2: "Incorrect - myelin effect (60x) outweighs diameter.",
+                        3: "Incorrect - speeds vary greatly."
+                    }
+                },
+                {
+                    id: 7,
+                    question: "Why does saltatory conduction minimize disturbances in Na⁺/K⁺ concentration gradients?",
+                    options: [
+                        "Depolarization only at nodes minimizes ion movement per impulse",
+                        "Myelin actively pumps ions maintaining gradients",
+                        "Nodes contain more efficient Na⁺/K⁺ pumps",
+                        "Saltatory conduction doesn't save energy"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Depolarization at nodes only means less membrane area depolarized per impulse → fewer ions cross → less pumping needed → energy saved. Ionic currents are restricted to nodes, minimizing gradient disturbances.",
+                    incorrectReasoning: {
+                        1: "Incorrect - myelin is passive insulator.",
+                        2: "Incorrect - pumps are similar; efficiency in reduced movement.",
+                        3: "Incorrect - explicitly states energy saving."
+                    }
+                },
+                {
+                    id: 8,
+                    question: "What causes hyperpolarization after an action potential?",
+                    options: [
+                        "Delayed closing of K⁺ channels allows excess K⁺ efflux",
+                        "Continued Na⁺ influx after depolarization",
+                        "Active transport by Na⁺/K⁺ pump during repolarization",
+                        "Measurement artifact without significance"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Hyperpolarization is slight overshoot below resting potential due to delayed closing of potassium gates compared with sodium gates. K⁺ continues leaving after Na⁺ channels closed, making inside more negative.",
+                    incorrectReasoning: {
+                        1: "Incorrect - Na⁺ influx stops during repolarization.",
+                        2: "Incorrect - pump works continuously.",
+                        3: "Incorrect - has functional significance."
+                    }
+                }
+            ],
+            nervousSystem: [
+                {
+                    id: 1,
+                    question: "What are the main divisions of human nervous system?",
+                    options: [
+                        "Central Nervous System (CNS) and Peripheral Nervous System (PNS)",
+                        "Brain and nerves only",
+                        "Sensory and motor systems only",
+                        "Voluntary and involuntary systems"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Human nervous system consists of CNS (brain and spinal cord) and PNS (everything else). CNS is coordinating centre, PNS transmits information to/from CNS.",
+                    incorrectReasoning: {
+                        1: "Incorrect - includes spinal cord as part of CNS.",
+                        2: "Incorrect - includes autonomic division.",
+                        3: "Incorrect - includes both voluntary and involuntary."
+                    }
+                },
+                {
+                    id: 2,
+                    question: "Which division of nervous system controls voluntary movements?",
+                    options: [
+                        "Somatic nervous system",
+                        "Autonomic nervous system",
+                        "Sympathetic division",
+                        "Parasympathetic division"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Somatic nervous system controls voluntary movements of skeletal muscles. Autonomic nervous system controls involuntary responses of glands, smooth and cardiac muscles.",
+                    incorrectReasoning: {
+                        1: "Incorrect - autonomic controls involuntary functions.",
+                        2: "Incorrect - sympathetic is part of autonomic.",
+                        3: "Incorrect - parasympathetic is part of autonomic."
+                    }
+                },
+                {
+                    id: 3,
+                    question: "What is activated during 'fight or flight' response?",
+                    options: [
+                        "Sympathetic division of autonomic nervous system",
+                        "Parasympathetic division of autonomic nervous system",
+                        "Somatic nervous system only",
+                        "Central nervous system only"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Sympathetic division mediates fight or flight responses during emergencies. It increases heart rate, blood pressure, dilates pupils, inhibits digestion.",
+                    incorrectReasoning: {
+                        1: "Incorrect - parasympathetic mediates rest/digest.",
+                        2: "Incorrect - somatic controls voluntary movements.",
+                        3: "Incorrect - CNS coordinates but specific division is sympathetic."
+                    }
+                },
+                {
+                    id: 4,
+                    question: "How many pairs of cranial nerves are there?",
+                    options: [
+                        "12 pairs",
+                        "31 pairs",
+                        "24 pairs",
+                        "8 pairs"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "There are twelve pairs of cranial nerves arising from brain. They are largely concerned with head, neck and facial regions. Some are sensory, some motor, others mixed.",
+                    incorrectReasoning: {
+                        1: "Incorrect - 31 pairs are spinal nerves.",
+                        2: "Incorrect - not 24 pairs.",
+                        3: "Incorrect - not 8 pairs."
+                    }
+                },
+                {
+                    id: 5,
+                    question: "How many pairs of spinal nerves originate from spinal cord?",
+                    options: [
+                        "31 pairs",
+                        "12 pairs",
+                        "24 pairs",
+                        "8 pairs"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Thirty-one pairs of spinal nerves originate from spinal cord. They are all mixed nerves providing two-way communication between spinal cord and body parts.",
+                    incorrectReasoning: {
+                        1: "Incorrect - 12 pairs are cranial nerves.",
+                        2: "Incorrect - not 24 pairs.",
+                        3: "Incorrect - not 8 pairs."
+                    }
+                },
+                {
+                    id: 6,
+                    question: "What does dorsal root of spinal nerve contain?",
+                    options: [
+                        "Sensory neuron fibers conducting impulses to spinal cord",
+                        "Motor neuron fibers conducting impulses from spinal cord",
+                        "Both sensory and motor fibers",
+                        "Autonomic fibers only"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Dorsal root contains fibers of sensory neurons which conduct impulses to spinal cord. Ventral root contains fibers of motor neurons which conduct impulses away from cord.",
+                    incorrectReasoning: {
+                        1: "Incorrect - ventral root contains motor fibers.",
+                        2: "Incorrect - dorsal root is sensory only.",
+                        3: "Incorrect - autonomic fibers are in both roots."
+                    }
+                },
+                {
+                    id: 7,
+                    question: "Why are spinal nerves called 'mixed nerves'?",
+                    options: [
+                        "Contain both sensory and motor fibers",
+                        "Contain both sympathetic and parasympathetic fibers",
+                        "Function in both CNS and PNS",
+                        "Control both voluntary and involuntary functions"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Spinal nerves are mixed because each contains both sensory fibers (in dorsal root) and motor fibers (in ventral root). This allows two-way communication between spinal cord and body.",
+                    incorrectReasoning: {
+                        1: "Incorrect - contain autonomic but mixed refers to sensory/motor.",
+                        2: "Incorrect - spinal nerves are PNS only.",
+                        3: "Incorrect - control specific regions, not necessarily both."
+                    }
+                },
+                {
+                    id: 8,
+                    question: "What is the function of cerebrospinal fluid (CSF)?",
+                    options: [
+                        "Cushions brain from shock",
+                        "Provides nutrients to brain cells",
+                        "Conducts nerve impulses",
+                        "Produces neurotransmitters"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Cerebrospinal fluid (CSF) is fluid between arachnoid and pia mater meninges. It helps cushion brain from shock and provides buoyancy.",
+                    incorrectReasoning: {
+                        1: "Incorrect - nutrients provided by blood.",
+                        2: "Incorrect - impulses conducted by neurons.",
+                        3: "Incorrect - neurotransmitters produced by neurons."
+                    }
+                }
+            ],
+            forty: [
+                {
+                    id: 1,
+                    question: "Which of the following correctly describes the pathway of a reflex arc when touching a hot object?",
+                    options: [
+                        "Receptor → Sensory neuron → Interneuron → Motor neuron → Effector",
+                        "Receptor → Motor neuron → Interneuron → Sensory neuron → Effector",
+                        "Effector → Sensory neuron → Interneuron → Motor neuron → Receptor",
+                        "Sensory neuron → Receptor → Interneuron → Effector → Motor neuron"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Reflex arc includes five parts: receptors, sensory neurons, interneuron, motor neuron and effectors. Sequence: receptor detects stimulus → sensory neuron to spinal cord → interneuron processes → motor neuron to effector → response.",
+                    incorrectReasoning: {
+                        1: "Incorrect - motor neuron comes after interneuron, not before.",
+                        2: "Incorrect - effector responds last, not first.",
+                        3: "Incorrect - receptor comes first, sensory neuron second."
+                    }
+                },
+                {
+                    id: 2,
+                    question: "What maintains the resting membrane potential of -70mV in neurons?",
+                    options: [
+                        "Na⁺/K⁺ pump and differential ion permeability",
+                        "Continuous depolarization from adjacent neurons",
+                        "Constant neurotransmitter release",
+                        "Active firing of action potentials"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Resting potential maintained by: 1) Na⁺/K⁺ pump (3 Na⁺ out, 2 K⁺ in), 2) Higher permeability to K⁺ at rest (K⁺ leaks out), 3) Concentration gradients (high K⁺ inside, high Na⁺ outside), 4) Negative organic ions inside.",
+                    incorrectReasoning: {
+                        1: "Incorrect - resting state has minimal depolarization.",
+                        2: "Incorrect - neurotransmitters not continuously released at rest.",
+                        3: "Incorrect - resting state has no action potentials."
+                    }
+                },
+                {
+                    id: 3,
+                    question: "During depolarization phase of action potential, what occurs?",
+                    options: [
+                        "Na⁺ rushes into neuron through voltage-gated channels",
+                        "K⁺ rushes out of neuron through voltage-gated channels",
+                        "Cl⁻ rushes into neuron",
+                        "Ca²⁺ rushes into neuron"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Depolarization occurs when voltage-gated Na⁺ channels open in response to threshold stimulus. Na⁺ rushes into neuron down electrochemical gradient, changing membrane potential from -70mV toward +30mV.",
+                    incorrectReasoning: {
+                        1: "Incorrect - K⁺ efflux occurs during repolarization.",
+                        2: "Incorrect - Cl⁻ movement not primary in depolarization.",
+                        3: "Incorrect - Ca²⁺ important but not primary in depolarization."
+                    }
+                },
+                {
+                    id: 4,
+                    question: "What is the function of myelin sheath in neurons?",
+                    options: [
+                        "Increases conduction velocity through saltatory conduction",
+                        "Produces neurotransmitters for synaptic transmission",
+                        "Generates action potentials",
+                        "Receives signals from other neurons"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Myelin sheath acts as insulating layer around axon. Increases conduction velocity through saltatory conduction where action potential jumps between Nodes of Ranvier. Formed by Schwann cells in PNS.",
+                    incorrectReasoning: {
+                        1: "Incorrect - neurotransmitters produced in cell body.",
+                        2: "Incorrect - action potentials generated at axon hillock.",
+                        3: "Incorrect - dendrites receive signals."
+                    }
+                },
+                {
+                    id: 5,
+                    question: "Which part of neuron contains nucleus and Nissl's bodies?",
+                    options: [
+                        "Cell body",
+                        "Dendrites",
+                        "Axon",
+                        "Axon terminals"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Cell body (soma) contains nucleus, Nissl's bodies (ribosomes and rough ER for protein synthesis), neurofibrils, and other organelles. It's metabolic center of neuron.",
+                    incorrectReasoning: {
+                        1: "Incorrect - dendrites receive signals, no nucleus.",
+                        2: "Incorrect - axon conducts impulses, no nucleus.",
+                        3: "Incorrect - terminals release neurotransmitters."
+                    }
+                },
+                {
+                    id: 6,
+                    question: "What is the effect of sympathetic nervous system activation?",
+                    options: [
+                        "Increases heart rate, dilates pupils, inhibits digestion",
+                        "Decreases heart rate, constricts pupils, stimulates digestion",
+                        "Causes skeletal muscle contraction",
+                        "Initiates voluntary movements"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Sympathetic division (fight/flight) prepares body for emergency: increases heart rate, blood pressure; dilates pupils; inhibits digestion; stimulates glucose release; dilates bronchioles.",
+                    incorrectReasoning: {
+                        1: "Incorrect - describes parasympathetic effects.",
+                        2: "Incorrect - skeletal muscles controlled by somatic.",
+                        3: "Incorrect - voluntary movements by somatic."
+                    }
+                },
+                {
+                    id: 7,
+                    question: "What occurs during repolarization phase of action potential?",
+                    options: [
+                        "K⁺ rushes out of neuron through voltage-gated channels",
+                        "Na⁺ rushes into neuron",
+                        "Cl⁻ rushes into neuron",
+                        "Ca²⁺ rushes into neuron"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Repolarization occurs when voltage-gated K⁺ channels open. K⁺ rushes out of neuron down concentration gradient, restoring negative interior. This returns membrane potential toward resting level.",
+                    incorrectReasoning: {
+                        1: "Incorrect - Na⁺ influx during depolarization.",
+                        2: "Incorrect - Cl⁻ movement not primary.",
+                        3: "Incorrect - Ca²⁺ important but not primary."
+                    }
+                },
+                {
+                    id: 8,
+                    question: "Which receptors detect light stimuli?",
+                    options: [
+                        "Photoreceptors",
+                        "Chemoreceptors",
+                        "Mechanoreceptors",
+                        "Thermoreceptors"
+                    ],
+                    correctAnswer: 0,
+                    explanation: "Photoreceptors detect light stimuli. Examples: rods and cone cells in retina of eye. They contain photopigments that change when light hits them.",
+                    incorrectReasoning: {
+                        1: "Incorrect - chemoreceptors detect chemicals.",
+                        2: "Incorrect - mechanoreceptors detect pressure/position.",
+                        3: "Incorrect - thermoreceptors detect temperature."
+                    }
+                }
+            ]
+        };
+
+        // Progress tracking
+        let progress = {
+            intro: Array(nervousCoordinationMCQs.intro.length).fill(false),
+            neurons: Array(nervousCoordinationMCQs.neurons.length).fill(false),
+            nerveImpulse: Array(nervousCoordinationMCQs.nerveImpulse.length).fill(false),
+            nervousSystem: Array(nervousCoordinationMCQs.nervousSystem.length).fill(false),
+            forty: Array(nervousCoordinationMCQs.forty.length).fill(false)
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the application
+            initApp();
+            
+            function initApp() {
+                // Set up event listeners for welcome screen
+                document.getElementById('start-btn').addEventListener('click', () => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                });
+                
+                // Hide welcome animation after delay
+                setTimeout(() => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                }, 5000);
+                
+                // Load progress from localStorage
+                loadProgress();
+                
+                // Set up tab navigation
+                setupTabs();
+                
+                // Set up event listeners
+                setupEventListeners();
+                
+                // Load MCQs for initial tab
+                loadTopicMCQs('intro');
+                
+                // Update progress display
+                updateProgress();
+                
+                // Apply animations
+                applyAnimations();
+                
+                // Render KaTeX equations
+                renderKaTeX();
+            }
+            
+            function setupTabs() {
+                const tabButtons = document.querySelectorAll('.nav-btn[data-tab]');
+                const tabContents = document.querySelectorAll('.tab-content');
+                
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.getAttribute('data-tab');
+                        
+                        // Update active tab button
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Show active content
+                        tabContents.forEach(content => content.classList.remove('active'));
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
+                        
+                        // Load MCQs for this tab if not loaded
+                        if (document.getElementById(`${tabId}-mcqs-container`)) {
+                            loadTopicMCQs(tabId);
+                        }
+                        
+                        // Re-render KaTeX for new content
+                        setTimeout(renderKaTeX, 100);
+                    });
+                });
+            }
+            
+            function setupEventListeners() {
+                // Hamburger menu toggle
+                document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+                
+                // Theme toggle
+                document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+                
+                // Refresh buttons for each topic
+                const topics = ['intro', 'neurons', 'nerve-impulse', 'nervous-system', 'forty'];
+                topics.forEach(topic => {
+                    const btn = document.getElementById(`refresh-${topic}`);
+                    if (btn) {
+                        btn.addEventListener('click', () => loadTopicMCQs(topic));
+                    }
+                });
+                
+                // Reset progress button
+                document.getElementById('reset-progress').addEventListener('click', resetProgress);
+            }
+            
+            function toggleMenu() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const mainNav = document.getElementById('main-nav');
+                
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            }
+            
+            function toggleTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                document.body.classList.toggle('dark-mode');
+                themeToggle.classList.toggle('dark');
+                saveToLocalStorage('darkMode', document.body.classList.contains('dark-mode'));
+            }
+            
+            function loadTopicMCQs(topic) {
+                const container = document.getElementById(`${topic}-mcqs-container`);
+                if (!container || !nervousCoordinationMCQs[topic]) return;
+                
+                container.innerHTML = '';
+                
+                // Randomize order of MCQs for this topic
+                const shuffledMCQs = [...nervousCoordinationMCQs[topic]].sort(() => Math.random() - 0.5);
+                
+                shuffledMCQs.forEach(mcq => {
+                    const mcqCard = createMCQCard(mcq, topic);
+                    container.appendChild(mcqCard);
+                });
+                
+                // Re-render KaTeX
+                setTimeout(renderKaTeX, 100);
+            }
+            
+            function createMCQCard(mcq, topic) {
+                const card = document.createElement('div');
+                card.className = 'card mcq-card fade-in';
+                card.id = `${topic}-mcq-${mcq.id}`;
+                
+                // Check if this MCQ has been completed
+                const isCompleted = progress[topic] && progress[topic][mcq.id - 1];
+                
+                // Randomize option order
+                const options = [...mcq.options];
+                const correctAnswer = mcq.correctAnswer;
+                const correctOption = options[correctAnswer];
+                
+                // Shuffle options
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
+                
+                // Find new index of correct answer after shuffling
+                const newCorrectIndex = options.indexOf(correctOption);
+                
+                // Build incorrect reasoning HTML
+                let incorrectReasoningHTML = '';
+                if (mcq.incorrectReasoning) {
+                    incorrectReasoningHTML = `<div class="incorrect-reasoning" style="margin-top: 8.1px; padding: 6.48px; background: rgba(220, 53, 69, 0.05); border-radius: var(--border-radius); border-left: 2.43px solid #dc3545;">
+                        <div style="font-weight: 700; color: #dc3545; margin-bottom: 3.24px; font-size: 0.486rem;">Why Other Options Are Incorrect:</div>`;
+                    
+                    Object.entries(mcq.incorrectReasoning).forEach(([index, reason]) => {
+                        incorrectReasoningHTML += `<div style="margin-bottom: 2.43px; font-size: 0.405rem;"><strong>Option ${String.fromCharCode(65 + parseInt(index))}:</strong> ${reason}</div>`;
+                    });
+                    incorrectReasoningHTML += `</div>`;
+                }
+                
+                card.innerHTML = `
+                    <div class="mcq-info">
+                        <div class="mcq-id">MCQ #${mcq.id} ${isCompleted ? '<i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>' : ''}</div>
+                        <div class="mcq-question">${mcq.question}</div>
+                        <div class="mcq-options">
+                            ${options.map((option, index) => `
+                                <div class="mcq-option" data-option="${index}" data-correct="${index === newCorrectIndex}">
+                                    <span style="font-weight: 700;">${String.fromCharCode(65 + index)})</span> ${option}
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="mcq-explanation">
+                            <div class="explanation-title">Detailed Explanation:</div>
+                            <div class="explanation-content">${mcq.explanation}</div>
+                            ${incorrectReasoningHTML}
+                            <div style="margin-top: 8.1px; padding: 6.48px; background: rgba(59, 130, 246, 0.05); border-radius: var(--border-radius); border-left: 2.43px solid var(--primary);">
+                                <div style="font-weight: 700; color: var(--primary); margin-bottom: 3.24px; font-size: 0.486rem;">Learning Tip:</div>
+                                <div style="font-size: 0.405rem;">Remember key concepts: ${getLearningTip(topic, mcq.id)}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mcq-actions">
+                        <button class="btn btn-primary check-answer-btn">
+                            <i class="fas fa-check"></i> Check Answer
+                        </button>
+                        <button class="btn btn-secondary show-explanation-btn">
+                            <i class="fas fa-lightbulb"></i> Show Explanation
+                        </button>
+                    </div>
+                `;
+                
+                // Add event listeners
+                const checkAnswerBtn = card.querySelector('.check-answer-btn');
+                const showExplanationBtn = card.querySelector('.show-explanation-btn');
+                const optionElements = card.querySelectorAll('.mcq-option');
+                
+                let selectedOption = null;
+                
+                // If already completed, show the correct answer
+                if (isCompleted) {
+                    const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                    correctOptionElement.classList.add('correct');
+                    
+                    optionElements.forEach(option => {
+                        option.style.pointerEvents = 'none';
+                    });
+                    
+                    checkAnswerBtn.disabled = true;
+                    checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                } else {
+                    optionElements.forEach(option => {
+                        option.addEventListener('click', () => {
+                            optionElements.forEach(opt => opt.classList.remove('selected'));
+                            option.classList.add('selected');
+                            selectedOption = parseInt(option.getAttribute('data-option'));
+                        });
+                    });
+                    
+                    checkAnswerBtn.addEventListener('click', () => {
+                        if (selectedOption === null) {
+                            alert('Please select an answer first!');
+                            return;
+                        }
+                        
+                        optionElements.forEach(option => {
+                            option.classList.remove('correct', 'incorrect');
+                        });
+                        
+                        const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                        correctOptionElement.classList.add('correct');
+                        
+                        const selectedOptionElement = card.querySelector(`.mcq-option[data-option="${selectedOption}"]`);
+                        const isCorrect = selectedOptionElement.getAttribute('data-correct') === 'true';
+                        
+                        if (!isCorrect) {
+                            selectedOptionElement.classList.add('incorrect');
+                        } else {
+                            // Mark as completed
+                            if (progress[topic]) {
+                                progress[topic][mcq.id - 1] = true;
+                                saveProgress();
+                                updateProgress();
+                                
+                                const mcqId = card.querySelector('.mcq-id');
+                                mcqId.innerHTML = `MCQ #${mcq.id} <i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>`;
+                                
+                                optionElements.forEach(option => {
+                                    option.style.pointerEvents = 'none';
+                                });
+                                
+                                checkAnswerBtn.disabled = true;
+                                checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                            }
+                        }
+                    });
+                }
+                
+                showExplanationBtn.addEventListener('click', () => {
+                    const explanation = card.querySelector('.mcq-explanation');
+                    explanation.classList.toggle('show');
+                    
+                    // Change button text
+                    if (explanation.classList.contains('show')) {
+                        showExplanationBtn.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Explanation';
+                    } else {
+                        showExplanationBtn.innerHTML = '<i class="fas fa-lightbulb"></i> Show Explanation';
+                    }
+                });
+                
+                return card;
+            }
+            
+            function getLearningTip(topic, id) {
+                const tips = {
+                    intro: {
+                        1: "Nervous coordination: Reception → Analysis → Response",
+                        2: "Chemoreceptors detect chemicals, photoreceptors detect light",
+                        3: "CNS integrates information, PNS transmits it",
+                        4: "CPU in computers analogous to CNS in humans",
+                        5: "Mechanoreceptors detect pressure, thermoreceptors detect temperature",
+                        6: "Human nervous system most evolved due to complexity",
+                        7: "Effectors: muscles (movement) and glands (secretion)",
+                        8: "Reflex arc bypasses brain for rapid response"
+                    },
+                    neurons: {
+                        1: "Nissl's bodies = ribosomes + rough ER for protein synthesis",
+                        2: "Bipolar neurons: cell body between axon and dendrite",
+                        3: "Myelin increases conduction velocity via saltatory conduction",
+                        4: "Dendrites → toward cell body, Axons → away from cell body",
+                        5: "Axolemma = axon membrane, essential for action potentials",
+                        6: "Dorsal root ganglion neurons are unipolar",
+                        7: "Conduction velocity: myelinated > unmyelinated, thick > thin",
+                        8: "Presynaptic terminals contain neurotransmitter vesicles"
+                    },
+                    nerveImpulse: {
+                        1: "Nerve impulse = electrical + chemical changes",
+                        2: "Threshold ensures significant stimuli only produce responses",
+                        3: "Refractory period ensures one-way propagation",
+                        4: "Saltatory conduction jumps between Nodes of Ranvier",
+                        5: "Depolarization: Na⁺ in, Repolarization: K⁺ out",
+                        6: "Myelinated: up to 120 m/s, Unmyelinated: 1-3 m/s",
+                        7: "Saltatory conduction saves energy by minimizing ion movement",
+                        8: "Hyperpolarization: K⁺ channels close slowly after repolarization"
+                    },
+                    nervousSystem: {
+                        1: "Nervous system: CNS (brain+spinal cord) + PNS",
+                        2: "Somatic = voluntary, Autonomic = involuntary",
+                        3: "Sympathetic = fight/flight, Parasympathetic = rest/digest",
+                        4: "12 pairs cranial nerves from brain",
+                        5: "31 pairs spinal nerves from spinal cord",
+                        6: "Dorsal root = sensory, Ventral root = motor",
+                        7: "Spinal nerves mixed = sensory + motor fibers",
+                        8: "CSF cushions brain, provides buoyancy"
+                    },
+                    forty: {
+                        1: "Reflex arc: Receptor → Sensory → Interneuron → Motor → Effector",
+                        2: "Resting potential: -70mV maintained by Na⁺/K⁺ pump",
+                        3: "Depolarization: Na⁺ influx through voltage-gated channels",
+                        4: "Myelin increases speed via saltatory conduction",
+                        5: "Cell body contains nucleus and Nissl's bodies",
+                        6: "Sympathetic: increases HR, dilates pupils, inhibits digestion",
+                        7: "Repolarization: K⁺ efflux through voltage-gated channels",
+                        8: "Photoreceptors detect light, chemoreceptors detect chemicals"
+                    }
+                };
+                
+                return tips[topic] && tips[topic][id] ? tips[topic][id] : "Review related textbook concepts for this topic.";
+            }
+            
+            function updateProgress() {
+                // Calculate completion counts
+                let totalCompleted = 0;
+                let totalMCQs = 0;
+                
+                // For each topic
+                Object.keys(progress).forEach(topic => {
+                    if (progress[topic]) {
+                        const completed = progress[topic].filter(Boolean).length;
+                        totalCompleted += completed;
+                        totalMCQs += progress[topic].length;
+                        
+                        // Update topic-specific progress if elements exist
+                        const completedEl = document.getElementById(`${topic}-completed`);
+                        const progressEl = document.getElementById(`${topic}-progress`);
+                        const summaryEl = document.getElementById(`${topic}-summary`);
+                        const summaryProgressEl = document.getElementById(`${topic}-summary-progress`);
+                        
+                        if (completedEl) completedEl.textContent = completed;
+                        if (progressEl) progressEl.style.width = `${(completed / progress[topic].length) * 100}%`;
+                        if (summaryEl) summaryEl.textContent = completed;
+                        if (summaryProgressEl) summaryProgressEl.style.width = `${(completed / progress[topic].length) * 100}%`;
+                    }
+                });
+                
+                // Calculate accuracy
+                const accuracy = totalCompleted > 0 ? Math.round((totalCompleted / totalMCQs) * 100) : 0;
+                
+                // Update overall stats
+                document.getElementById('completed-mcqs').textContent = totalCompleted;
+                document.getElementById('accuracy').textContent = `${accuracy}%`;
+                
+                // Update overall progress
+                document.getElementById('overall-completed').textContent = totalCompleted;
+                const totalAllMCQs = 40; // intro(8) + neurons(8) + nerveImpulse(8) + nervousSystem(8) + forty(8) = 40
+                document.getElementById('overall-progress').style.width = `${(totalCompleted / totalAllMCQs) * 100}%`;
+                
+                // Update forty tab progress (shows all 40)
+                document.getElementById('forty-completed').textContent = totalCompleted;
+                document.getElementById('forty-progress').style.width = `${(totalCompleted / totalAllMCQs) * 100}%`;
+                document.getElementById('forty-summary').textContent = totalCompleted;
+                document.getElementById('forty-summary-progress').style.width = `${(totalCompleted / totalAllMCQs) * 100}%`;
+            }
+            
+            function resetProgress() {
+                if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
+                    // Reset all progress arrays
+                    Object.keys(progress).forEach(topic => {
+                        if (progress[topic]) {
+                            progress[topic] = Array(progress[topic].length).fill(false);
+                        }
+                    });
+                    
+                    saveProgress();
+                    updateProgress();
+                    
+                    // Reload all MCQ containers
+                    const topics = ['intro', 'neurons', 'nerve-impulse', 'nervous-system', 'forty'];
+                    topics.forEach(topic => {
+                        const container = document.getElementById(`${topic}-mcqs-container`);
+                        if (container) {
+                            loadTopicMCQs(topic);
+                        }
+                    });
+                }
+            }
+            
+            function saveProgress() {
+                saveToLocalStorage('nervousCoordinationProgress', progress);
+            }
+            
+            function loadProgress() {
+                const savedProgress = getFromLocalStorage('nervousCoordinationProgress');
+                if (savedProgress) {
+                    // Merge with default progress structure
+                    Object.keys(progress).forEach(topic => {
+                        if (savedProgress[topic]) {
+                            progress[topic] = savedProgress[topic];
+                        }
+                    });
+                }
+            }
+            
+            function applyAnimations() {
+                const elements = document.querySelectorAll('.panel, .card, .nav-btn');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('fade-in');
+                    }, index * 50);
+                });
+            }
+            
+            function renderKaTeX() {
+                if (typeof renderMathInElement !== 'undefined') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '$', right: '$', display: false},
+                            {left: '\\(', right: '\\)', display: false},
+                            {left: '\\[', right: '\\]', display: true}
+                        ],
+                        throwOnError: false
+                    });
+                }
+            }
+            
+            function saveToLocalStorage(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                } catch (e) {
+                    console.error('Error saving to localStorage:', e);
+                }
+            }
+            
+            function getFromLocalStorage(key) {
+                try {
+                    const value = localStorage.getItem(key);
+                    return value ? JSON.parse(value) : null;
+                } catch (e) {
+                    console.error('Error reading from localStorage:', e);
+                    return null;
+                }
+            }
+            
+            // Load dark mode setting
+            const darkMode = getFromLocalStorage('darkMode');
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').classList.add('dark');
+            }
+        });
+    </script>
+</body>
+</html>
